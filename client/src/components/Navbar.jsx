@@ -8,6 +8,18 @@ import '../styles/navbar.css';
 function Navbar() {
   const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLogout = async () => {
+    try { await logoutAPI(); } catch (error) {
+      console.error('Logout API error:', error);
+    }
+    logout();
+    toast.success('Logged out');
+    navigate('/login');
+  };
+
+  const isActive = (path) => location.pathname === path;
 
   return (
     <nav className="navbar">
@@ -26,3 +38,5 @@ function Navbar() {
     </nav>
   );
 }
+
+export default Navbar;
