@@ -71,7 +71,7 @@ function LoginPage() {
             <span className="login-logo-text">CodeTranslator</span>
           </div>
 
-          <h1 className="login-hero-title">Translate, Analyze &amp; Optimize Your Code</h1>
+          <h1 className="login-hero-title text-white">Translate, Analyze &amp; Optimize Your Code</h1>
           <p className="login-hero-subtitle">
             AI-powered code assistant that helps you work across programming languages effortlessly.
           </p>
